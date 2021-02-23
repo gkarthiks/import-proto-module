@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+import "src/one.proto";
+
+package two;
+option go_package = "two";
+
+message MessageTwo {
+  string messageTwo = 1;
+  one.MessageOne importedMessageOne = 2;
+}
